@@ -1,5 +1,7 @@
 'use strict';
 
+import {Meteor} from 'meteor/meteor'
+
 Meteor.methods({
 	/**
 	 * Update the sortField of documents with given ids in a collection, incrementing it by incDec

@@ -1,3 +1,6 @@
+import './template.html'
+import Sortable from 'sortablejs'
+
 /*
 Make a Sortable reactive by binding it to a Mongo.Collection.
 Calls `rubaxa:sortable/collection-update` on the server to update the sortField of affected records.

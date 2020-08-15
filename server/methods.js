@@ -1,7 +1,9 @@
-'use strict';
 
-Sortable = {};
-Sortable.collections = [];  // array of collection names that the client is allowed to reorder
+import {Meteor} from 'meteor/meteor'
+
+export const Sortable = {
+	collections: []
+};
 
 Meteor.methods({
 	/**
