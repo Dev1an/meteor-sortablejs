@@ -2,7 +2,7 @@ Package.describe({
   name: 'devian:sortable',
   version: '1.4.2',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Sortable blaze template based on mongo collection',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
