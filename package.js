@@ -1,6 +1,6 @@
 Package.describe({
   name: 'devian:sortable',
-  version: '1.4.2',
+  version: '1.4.3',
   // Brief, one-line summary of the package.
   summary: 'Sortable blaze template based on mongo collection',
   // URL to the Git repository containing the source code for this package.
@@ -17,7 +17,9 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.10.2');
   api.use('ecmascript');
-  api.use('templating', 'client');
+  api.use('templating@1.3.2', 'client');
+  api.use('underscore', 'client');
+  api.use('check', 'server');
   api.use('dburles:mongo-collection-instances@0.3.4');
   api.mainModule('client/main.js', 'client');
   api.mainModule('server/main.js', 'server');
