@@ -40,7 +40,8 @@ Persist the sort order in the 'order' field of each document in the collection:
 *Server:*
 
 ```js
-Sortable.collections = <collectionName>;  // the name, not the variable
+import {collections} from 'meteor/devian:sortable'
+collections.add(<mongo collection name here>)
 ```
 
 Along with `items`, `sortField` is the only Meteor-specific option. If it's missing, the package will

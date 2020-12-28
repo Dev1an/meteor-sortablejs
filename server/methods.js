@@ -2,9 +2,7 @@
 import {Meteor} from 'meteor/meteor'
 import {check} from 'meteor/check'
 
-export const Sortable = {
-	collections: []
-};
+export const collections = new Set()
 
 Meteor.methods({
 	/**
@@ -17,10 +15,10 @@ Meteor.methods({
 	'rubaxa:sortable/collection-update': function (collectionName, ids, sortField, incDec) {
 		check(collectionName, String);
 		// don't allow the client to modify just any collection
-		if (!Sortable || !Array.isArray(Sortable.collections)) {
-			throw new Meteor.Error(500, 'Please define Sortable.collections');
+		if (collections.size === 0) {
+			throw new Meteor.Error(500, 'Please add names of mongo collections to the Soratble\'s `collections` Set');
 		}
-		if (Sortable.collections.indexOf(collectionName) === -1) {
+		if (!collections.has(collectionName)) {
 			throw new Meteor.Error(403, 'Collection <' + collectionName + '> is not Sortable. Please add it to Sortable.collections in server code.');
 		}
 

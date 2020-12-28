@@ -1,1 +1,1 @@
-export {Sortable} from './methods'
+export {collections} from './methods'

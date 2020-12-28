@@ -1,6 +1,6 @@
 Package.describe({
   name: 'devian:sortable',
-  version: '1.4.3',
+  version: '2.0.0',
   // Brief, one-line summary of the package.
   summary: 'Sortable blaze template based on mongo collection',
   // URL to the Git repository containing the source code for this package.
